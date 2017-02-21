@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1 {
+            width: 100%;
+        }
+        .style2
+        {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .style3
+        {
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <table class="style1">
+            <tr>
+                <td style="text-align: center" bgcolor="White" class="style3">
+                    <asp:Image ID="Image1" runat="server" Height="88px" 
+                        ImageUrl="~/Images/Home.png" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
+                        DynamicHorizontalOffset="2" Font-Bold="True" Font-Italic="False" 
+                        Font-Names="Verdana" Font-Size="Medium" ForeColor="#284E98" Height="16px" 
+                        Orientation="Horizontal" StaticSubMenuIndent="10px" Width="969px" 
+                        style="font-size: x-large; font-style: italic">
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/frmHome.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Admin Login" Value="Admin Login" 
+                                NavigateUrl="~/frmAdminLogin.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmSellerLogin.aspx" Text="Seller Login" 
+                                Value="Seller Login"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmCustomerLogin.aspx" Text="Cutomer Login" 
+                                Value="Cutomer Login"></asp:MenuItem>
+                            <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                                NavigateUrl="~/frmContactUs.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+        </table>
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    </form>
+    <table class="style1">
+        <tr>
+            <td bgcolor="#336699">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style2">All Rights Reserved @ 
+                DVD Rental System&nbsp;</span></td>
+        </tr>
+    </table>
+</body>
+</html>
